@@ -1,7 +1,13 @@
-# CrocodiliansApp
+# Crocodilians_reserve 🐊__🐊
 
 App to manage crocodilians in a reserve.<br>
-User only can get all crocodilians created (but endpoint to create, update and delete a crocodilian are created).
+User only can get all crocodilians created (but endpoint to create, update and delete a crocodilian are created, too).<br>
+User can see awesome videos about crocodilians and test (
+through a quiz) their knowledge about crocodilians ^^
+
+[Demo](https:/crocodilians-reserve.herokuapp.com)
+
+![baby_alligator](./src/assets/carousel/baby_crocodile.jpg)
 
 ## Development server
 
