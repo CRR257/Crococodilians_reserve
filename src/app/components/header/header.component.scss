@@ -1,0 +1,89 @@
+.navbar.navbar-inverse .navbar-header .navbar-brand {
+  display: flex;
+  text-align: center;
+  float: none;
+  justify-content: center;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+}
+
+.navbar-expand-lg {
+  border-bottom: 1px solid black;
+}
+
+.dropdown-menu.show {
+  background-color: #369208;
+  border-color: 1px solid green;
+  min-width: unset;
+  width: 140px !important;
+  a {
+    font-weight: 500;
+  }
+}
+
+.navbar.navbar-inverse .navbar-header {
+  float: none;
+}
+
+.navbar-dark {
+  background-color: #012d0196 !important;
+}
+
+.dropdown-toggle {
+  padding-left: 0px !important;
+  color: #48ad15;
+}
+
+.container-fluid {
+  display: unset;
+}
+
+.flag {
+  max-width: 20px;
+  margin-left: 5px;
+}
+
+.img {
+  max-width: 200px;
+  position: relative;
+  bottom: 30px;
+}
+
+@media (max-width: 570px) {
+  .navbar.navbar-inverse .navbar-header .navbar-brand {
+    position: relative;
+    top: 10px;
+  }
+  .img {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .dropdown-menu.show {
+    left: -23px;
+  }
+  li {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar.navbar-inverse .navbar-header .navbar-brand {
+    position: relative;
+    top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar.navbar-inverse .navbar-header .navbar-brand {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    position: relative;
+    top: 10px;
+  }
+  .img {
+    max-width: 200px;
+  }
+}

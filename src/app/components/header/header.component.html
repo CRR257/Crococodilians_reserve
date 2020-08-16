@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="navbar-header">
+                    <p class="navbar-brand">{{ 'header.title' | translate }}
+                      <img class="img" src="{{'../../../assets/icons/brooklyn.png'}}">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" routerLinkActive="active">
+        <a class="nav-link" routerLink="/welcome">{{ 'header.home' | translate }}</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/crocodilians"> {{ 'header.crocodilians' | translate }}</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/video"> {{ 'header.video' | translate }}</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/quiz"> {{ 'header.quiz' | translate }}</a>
+      </li>
+    </ul>
+    <div class="nav-item dropdown">
+        <p class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'header.language' | translate }}
+        </p>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [ngClass]="{'active': activeLang == 'es'}" (click)="cambiarLenguaje('cat')">Català<img class="flag" src="{{'../../../assets/icons/catalonia-flag.png'}}"></a>
+          <a class="dropdown-item" [ngClass]="{'active': activeLang == 'en'}" (click)="cambiarLenguaje('en')">English<img class="flag" src="{{'../../../assets/icons/english-flag.png'}}"></a>
+        </div>
+    </div>
+  </div>
+</nav>

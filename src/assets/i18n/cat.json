@@ -1,0 +1,31 @@
+{
+  "crocodilianTable": {
+    "age": "Edat (anys)",
+    "breed": "Espècie",
+    "close": "Tanca",
+    "download": "Descarrega",
+    "error": "Ho sentim, s'ha produït un error",
+    "image": "Fotografia",
+    "name": "Nom",
+    "title": "Llista de Crocodilians de la nostre reserva"
+  },
+  "footer": {
+    "title": "per CRR257"
+  },
+  "header": {
+    "crocodilians": "Cocodrils",
+    "home": "Portada",
+    "language": "Language",
+    "quiz": "Questionari",
+    "title": "Reserva de Cocodrils",
+    "video": "Vídeos"
+  },
+  "quiz": {
+    "correct": "Resposta correcte!",
+    "title": "Questionari de crocodilians",
+    "wrong": "Resposta incorrecte"
+  },
+  "video": {
+    "title": "Vídeos divertits!"
+  }
+}

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  // backendUrl: '/api'
+  backendUrl: 'https://crocodilians-reserve.herokuapp.com/api'
 };

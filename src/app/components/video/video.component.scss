@@ -1,0 +1,32 @@
+.content {
+  padding: 4rem 4rem 6rem 4rem;
+  &-title {
+    text-align: center;
+    font-weight: 500;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    font-size: 23px;
+  }
+}
+
+.card-deck .card {
+  margin-bottom: 20px !important;
+}
+
+@media (min-width: 570px) {
+  .content-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 3rem 3rem 6rem 3rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .content {
+    padding: 5rem 10rem 6rem 10rem;
+  }
+}

@@ -1,0 +1,52 @@
+<div class="content">
+  <p class="content-title">{{'crocodilianTable.title' | translate }}</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ 'crocodilianTable.name' | translate }}</th>
+        <th scope="col">{{ 'crocodilianTable.breed' | translate }}</th>
+        <th scope="col">{{ 'crocodilianTable.age' | translate }}</th>
+        <th scope="col" class="title">{{ 'crocodilianTable.image' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crocodile of crocodilian">
+        <td>{{crocodile.name}}</td>
+        <td>{{crocodile.breed}}</td>
+        <td>{{crocodile.age}}</td>
+        <td class="image">
+          <a data-toggle="modal" data-target="#exampleModalCenter"
+            (click)="imageSelected(crocodile.image)">
+            <img alt="Card image cap" class="card-img-top d-block w-100" src="{{crocodile.image}}"
+              alt="{{crocodile.name}}">
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="img-selected" src="{{image}}" alt="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <div><a href="{{image}}" target="_blank">{{ 'crocodilianTable.download' | translate }}</a></div>
+        <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center close-button" data-dismiss="modal"
+          type="button">{{ 'crocodilianTable.close' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="alert alert-danger" role="alert" *ngIf="errorCrocodilian.length > 0">
+    {{ 'crocodilianTable.error' | translate }}
+  </div>
+</div>
+

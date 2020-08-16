@@ -1,0 +1,84 @@
+<div class="content">
+  <div class="alert alert-danger" role="alert" *ngIf="errorQuiz.length > 0">
+    {{ 'crocodilianTable.error' | translate }}
+  </div>
+</div>
+
+<!-- counter component -->
+<div class="content-countdown" *ngIf="counter > 0 && showCounter">
+  <div class="counter">{{counter}}</div>
+</div>
+
+<!-- quiz result -->
+<div class="content-result" *ngIf="showQuizResult">
+  <div class="result">
+    <p class="result-title">Congratulations!</p>
+    <p class="result-content">Your score is {{totalCorrectAnswers}}</p>
+    <button class="btn btn-primary btn-lg submit-nextquizz" (click)="repeatQuizz()">Repeat the Quizz!</button>
+  </div>
+</div>
+
+<!-- quiz -->
+<div class="content" *ngIf="counter === 0 && showQuiz && !showQuizResult">
+  <p class="content-title">{{'quiz.title' | translate }}</p>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="card">
+      <img src="{{showQuiz.image}}" class="card-img-top" alt="{{showQuiz.numberQuestion}}">
+      <div class="card-body">
+        <p class="card-title">{{showQuiz.question}}</p>
+        <div class="row">
+          <div class="col-6">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer1}">
+                <input type="radio" value={{showQuiz.answer1}} id="showQuiz.answer1" formControlName="option"
+                  name="option">
+                {{showQuiz.answer1}}
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer2}">
+                <input type="radio" value={{showQuiz.answer2}} id="showQuiz.answer2" formControlName="option"
+                  name="option">
+                {{showQuiz.answer2}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer3}">
+                <input type="radio" value={{showQuiz.answer3}} id="showQuiz.answer3" formControlName="option"
+                  name="option">
+                {{showQuiz.answer3}}
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer4}">
+                <input type="radio" value={{showQuiz.answer4}} id="showQuiz.answer4" formControlName="option"
+                  name="option">
+                {{showQuiz.answer4}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body answer" *ngIf="answerSelected && showNextQuestion"
+        [ngClass]="{'correct': answerIsCorrect, 'wrong': !answerIsCorrect}">
+        <p *ngIf="answerIsCorrect"><strong>{{ 'quiz.correct' | translate }}</strong></p>
+        <p *ngIf="!answerIsCorrect"><strong>{{ 'quiz.wrong' | translate }}</strong></p>
+        <p>{{answerExplanation | translate }}</p>
+      </div>
+      <button *ngIf="!showNextQuestion" type="submit" class="btn btn-primary btn-lg submit__answer"
+        [disabled]="!form.valid">Submit</button>
+      <button *ngIf="showNextQuestion && numberQuestion === 9" class="btn btn-primary btn-lg submit-next"
+        (click)="nextQuestion()">Finish the Quizz!</button>
+      <button *ngIf="showNextQuestion && numberQuestion < 9" class="btn btn-primary btn-lg submit-next"
+        (click)="nextQuestion()">Next</button>
+    </div>
+  </form>
+</div>

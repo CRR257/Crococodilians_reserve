@@ -1,0 +1,31 @@
+{
+  "crocodilianTable": {
+    "age": "Age (years)",
+    "breed": "Breed",
+    "close": "Close",
+    "download": "Download",
+    "error": "Sorry, there has been an error",
+    "image": "Image",
+    "name": "Name",
+    "title": "List of Crocodilians in our reserve"
+  },
+  "footer": {
+    "title": "by CRR257"
+  },
+  "header": {
+    "crocodilians": "Crocodilians",
+    "home": "Home",
+    "language": "Idioma",
+    "quiz": "Quiz",
+    "title": "Crocodilians Reserve",
+    "video": "Videos"
+  },
+  "quiz": {
+    "correct": "Correct Answer!",
+    "title": "Crocodilian's Quizz",
+    "wrong": "Wrong Answer"
+  },
+  "video": {
+    "title": "Fun videos!"
+  }
+}
