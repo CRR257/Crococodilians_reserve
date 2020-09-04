@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { CrocodiliansService } from './crocodilians.service';
 
-describe('CrocodiliansService', () => {
+fdescribe('CrocodiliansService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {

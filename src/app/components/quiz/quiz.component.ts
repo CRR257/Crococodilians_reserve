@@ -31,7 +31,7 @@ export class QuizComponent implements OnInit {
   ngOnInit(): void {
     this.buildForm();
     this.getQuiz();
-    this.startCountdown(5);
+    this.startCountdown(4);
   }
 
   buildForm() {
@@ -67,12 +67,6 @@ export class QuizComponent implements OnInit {
     const interval = setInterval(() => {
       if (this.counter > 0) {
       this.counter--;
-      const showinterval = setInterval(() => {
-        if (this.counter > 0) {
-        this.showCounter = false;
-        }
-        clearInterval(showinterval);
-      }, 2000);
       this.showCounter = true;
       } else if (this.counter === 0 ) {
         clearInterval(interval);

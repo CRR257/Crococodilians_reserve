@@ -1,11 +1,36 @@
 .content {
-  padding: 4rem 3rem;
+  padding: 4rem 1rem;
   &-title {
     text-align: center;
     font-weight: 500;
     text-decoration: underline;
     padding-bottom: 1rem;
     font-size: 23px;
+  }
+}
+img {
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+.container-link {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.link {
+  color: black;
+  border: 1px solid grey;
+  padding: 1rem;
+  background: linear-gradient(180deg, #f9c300 0%, #bf7505 100%);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 5rem 4rem;
   }
 }
 

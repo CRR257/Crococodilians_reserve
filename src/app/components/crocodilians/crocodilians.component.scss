@@ -1,5 +1,5 @@
 .content {
-  padding: 4rem 5rem;
+  padding: 3rem 5rem;
   &-title {
     text-align: center;
     font-weight: 500;
@@ -45,19 +45,24 @@ a {
 
 @media (max-width: 450px) {
   img {
-    max-width: 366px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    padding: 2rem 0.5rem 5rem 0.5rem;
+    max-width: 325px;
   }
 }
 
 @media (min-width: 570px) {
   .content-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 3rem 0.5rem 5rem 0.5rem;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 
@@ -68,3 +73,10 @@ a {
     justify-content: center;
   }
 }
+
+@media (min-width: 1300px) {
+  .content {
+    padding: 5rem 5rem;
+  }
+}
+

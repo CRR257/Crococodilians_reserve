@@ -13,13 +13,16 @@
 }
 
 .dropdown-menu.show {
-  background-color: #369208;
-  border-color: 1px solid green;
+  background-color: #72a05b;
   min-width: unset;
-  width: 140px !important;
+  width: 124px !important;
   a {
     font-weight: 500;
   }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: green;
 }
 
 .navbar.navbar-inverse .navbar-header {
@@ -37,6 +40,7 @@
 
 .container-fluid {
   display: unset;
+  height: 7rem;
 }
 
 .flag {
@@ -57,6 +61,9 @@
   }
   .img {
     display: none;
+  }
+  .container-fluid {
+    height: 5rem;
   }
 }
 
@@ -85,5 +92,8 @@
   }
   .img {
     max-width: 200px;
+  }
+  .container-fluid {
+    height: 7rem;
   }
 }
