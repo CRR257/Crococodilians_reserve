@@ -18,7 +18,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Use the `ng build --prod` flag for a production build.
 The build artifacts will be stored in the `dist/` directory. <br>
 Copy the folder created to the backend folder `front/`
-In backend part, use `npm run heroku master` to deploy to heroku
+In backend part, use `git push heroku master` to deploy to heroku
 
 ## Backend
 
