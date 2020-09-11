@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-6">
             <div class="btn-group btn-group-toggle">
-              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer1}">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer1, 'next': showNextQuestion === true}">
                 <input type="radio" value={{showQuiz.answer1}} id="showQuiz.answer1" formControlName="option"
                   name="option">
                 {{showQuiz.answer1}}
@@ -38,7 +38,7 @@
           </div>
           <div class="col-6">
             <div class="btn-group btn-group-toggle">
-              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer2}">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer2, 'next': showNextQuestion === true}">
                 <input type="radio" value={{showQuiz.answer2}} id="showQuiz.answer2" formControlName="option"
                   name="option">
                 {{showQuiz.answer2}}
@@ -49,18 +49,18 @@
         <div class="row">
           <div class="col-6">
             <div class="btn-group btn-group-toggle">
-              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer3}">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer3, 'next': showNextQuestion === true}">
                 <input type="radio" value={{showQuiz.answer3}} id="showQuiz.answer3" formControlName="option"
-                  name="option">
+                  name="option" >
                 {{showQuiz.answer3}}
               </label>
             </div>
           </div>
           <div class="col-6">
             <div class="btn-group btn-group-toggle">
-              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer4}">
+              <label class="btn" [ngClass]="{'selected': form.value.option === showQuiz.answer4, 'next': showNextQuestion === true}">
                 <input type="radio" value={{showQuiz.answer4}} id="showQuiz.answer4" formControlName="option"
-                  name="option">
+                  name="option" >
                 {{showQuiz.answer4}}
               </label>
             </div>

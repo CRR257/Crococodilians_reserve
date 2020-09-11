@@ -20,17 +20,29 @@ img {
 }
 
 .link {
-  color: black;
   border: 1px solid grey;
-  padding: 1rem;
-  background: linear-gradient(180deg, #f9c300 0%, #bf7505 100%);
-  border-radius: 4px;
-  font-weight: 600;
+  padding: 10px;
+  background: linear-gradient(180deg, #0aec3c 0%, #0d3e01 100%);
+}
+
+.link:hover {
+  border: 1px solid black;
+}
+
+@media (min-width: 425px) {
+  .link {
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
 }
 
 @media (min-width: 768px) {
   .content {
     padding: 5rem 4rem;
+  }
+  .link {
+    padding: 1.5rem 2rem;
   }
 }
 

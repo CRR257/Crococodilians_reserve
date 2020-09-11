@@ -31,7 +31,7 @@ export class QuizComponent implements OnInit {
   ngOnInit(): void {
     this.buildForm();
     this.getQuiz();
-    this.startCountdown(4);
+    //this.startCountdown(4);
   }
 
   buildForm() {
@@ -104,6 +104,7 @@ export class QuizComponent implements OnInit {
 
   nextQuestion() {
     this.showNextQuestion = false;
+    window.scroll(0,0);
     this.form.reset();
     const index = this.numberQuestion + 1;
     if (index <= 9) {
@@ -115,6 +116,7 @@ export class QuizComponent implements OnInit {
 
   repeatQuizz() {
     this.showQuizResult = false;
+    this.totalCorrectAnswers = 0;
     this.showQuestion(0);
   }
 }
