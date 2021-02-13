@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../../service/quiz/quiz.service';
-import { Quiz } from '../../interface/quiz';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { Answer } from '../../interface/answer';
+import { Quiz, Answer } from '../../shared';
+
 
 @Component({
   selector: 'app-quiz',
@@ -16,9 +16,7 @@ export class QuizComponent implements OnInit {
   showQuiz: Quiz;
   answer: Answer;
   numberQuestion: number = 0;
-  counter: number = 0;
   errorQuiz: Array<string> = [];
-  showCounter: boolean = false;
   answerSelected: string;
   answerIsCorrect: boolean;
   totalCorrectAnswers: number = 0;
@@ -31,7 +29,6 @@ export class QuizComponent implements OnInit {
   ngOnInit(): void {
     this.buildForm();
     this.getQuiz();
-    //this.startCountdown(4);
   }
 
   buildForm() {
@@ -40,6 +37,9 @@ export class QuizComponent implements OnInit {
     });
   }
 
+  /**
+   * Method de get quiz data
+   */
   getQuiz() {
     this.quizService.getQuiz().subscribe(
       data => {
@@ -53,6 +53,9 @@ export class QuizComponent implements OnInit {
     })
   }
 
+  /**
+   * Method de image's quiz
+   */
   setQuizImages(data) {
     this.quiz = data.map(obj =>
       Object.assign({}, obj, { image: 'assets/quiz/' + obj.image })
@@ -62,24 +65,18 @@ export class QuizComponent implements OnInit {
     console.log(this.quiz);
   }
 
-  startCountdown(seconds) {
-    this.counter = seconds;
-    const interval = setInterval(() => {
-      if (this.counter > 0) {
-      this.counter--;
-      this.showCounter = true;
-      } else if (this.counter === 0 ) {
-        clearInterval(interval);
-      }
-    }, 2500);
-  }
-
+  /**
+   * Method to get question
+   */
   showQuestion(index) {
     this.numberQuestion = index;
     this.showQuiz = this.quiz[this.numberQuestion];
     this.getAnswer(this.quiz[this.numberQuestion].id);
   }
 
+  /**
+   * Method to get answer
+   */
   getAnswer(questionId) {
     this.quizService.getAnswer(questionId).subscribe(
       data => {
@@ -90,6 +87,9 @@ export class QuizComponent implements OnInit {
     })
   }
 
+  /**
+   * Method to submit answer selected
+   */
   submit(){
     this.answerSelected = this.form.value.option;
     this.answerExplanation = this.answer.answerExplanation;
@@ -102,6 +102,9 @@ export class QuizComponent implements OnInit {
     }
   }
 
+  /**
+   * Method to get next question
+   */
   nextQuestion() {
     this.showNextQuestion = false;
     window.scroll(0,0);
@@ -114,6 +117,9 @@ export class QuizComponent implements OnInit {
     }
   }
 
+  /**
+   * Method to repeat quiz when user finish the quiz
+   */
   repeatQuizz() {
     this.showQuizResult = false;
     this.totalCorrectAnswers = 0;

@@ -1,0 +1,53 @@
+.content {
+  padding: 3rem 3rem;
+  &-title {
+    text-align: center;
+    font-weight: 500;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    font-size: 23px;
+  }
+  &-game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    &__result {
+      padding: 1rem 1rem 0 1rem;
+      border: 1px solid rgb(32, 9, 161);
+      background-color: #064067;
+      width: fit-content;
+      border-radius: 2px;
+      margin: 0 auto;
+      color: white;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.icon {
+  background-color: white;
+  border-radius: 93px;
+  width: 100px;
+  margin: 10px 0;
+}
+
+.selected {
+  border: 5px solid #064067;
+}
+
+button {
+  display: flex;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #06457d 0%, #041744 100%);
+}
+
+
+@media (max-width: 500px) {
+  .icon {
+    width: 60px;
+    margin: 0px 0;
+  }
+}
+
+

@@ -1,0 +1,60 @@
+<div class="content">
+  <p class="content-title">Let's play!</p>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <!-- user's choice -->
+    <div class="content-game">
+      <div class="btn-group btn-group-toggle" *ngFor="let item of gameIcons">
+        <label class="btn btn-ligh">
+          <img src={{item.src}} class="icon" [ngClass]="{'selected': form.value.iconPlayer === item.icon}" />
+          <input type="radio" value={{item.icon}} formControlName="iconPlayer" name="iconPlayer">
+        </label>
+      </div>
+    </div>
+    <!-- end of user's choice -->
+
+    <button type="submit" [disabled]="!form.valid" class="btn btn-success btn-lg">Machine's turn</button>
+
+    <!-- machine's choice -->
+    <div *ngIf="userChoice" class="content-game">
+      <div class="btn-group btn-group-toggle">
+        <label class="btn btn-ligh">
+          <img src={{machineIcon}} class="icon" />
+          <input type="radio" value="spock" formControlName="iconMachine" name="iconMachine">
+        </label>
+      </div>
+    </div>
+    <!-- end of machine's choice -->
+
+    <div *ngIf="result" class="content-game__result">
+      <p>{{result}}</p>
+    </div>
+    <button *ngIf="result"  type="submit" (click)="newGame()" class="btn btn-success btn-lg">Play again!</button>
+  </form>
+</div>
+
+
+
+<!-- <div class="btn-group btn-group-toggle">
+      <label class="btn btn-ligh">
+          <img src="../../../../assets/game/paper.png" class="icon" [ngClass]="{'selected': form.value.iconPlayer === gameValues[1]}" />
+        <input type="radio" value={{gameValues[1]}} formControlName="iconPlayer" name="iconPlayer">
+      </label>
+    </div>
+    <div class="btn-group btn-group-toggle">
+      <label class="btn btn-ligh">
+          <img src="../../../../assets/game/scissors.jpg" class="icon" [ngClass]="{'selected': form.value.iconPlayer === gameValues[2]}" />
+        <input type="radio" value={{gameValues[2]}} formControlName="iconPlayer" name="iconPlayer">
+      </label>
+    </div>
+    <div class="btn-group btn-group-toggle">
+      <label class="btn btn-ligh">
+          <img src="../../../../assets/game/lizard.jpg" class="icon" [ngClass]="{'selected': form.value.iconPlayer === gameValues[3]}" />
+        <input type="radio" value={{gameValues[3]}} formControlName="iconPlayer" name="iconPlayer">
+      </label>
+    </div>
+    <div class="btn-group btn-group-toggle">
+      <label class="btn btn-ligh">
+          <img src="../../../../assets/game/spock.jpg" class="icon" [ngClass]="{'selected': form.value.iconPlayer === gameValues[4]}"/>
+        <input type="radio" value={{gameValues[4]}} formControlName="iconPlayer" name="iconPlayer">
+      </label>
+    </div> -->

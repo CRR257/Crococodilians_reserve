@@ -32,6 +32,9 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/quiz"> {{ 'header.quiz' | translate }}</a>
       </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/game"> {{ 'header.game' | translate }}</a>
+      </li>
     </ul>
     <div class="nav-item dropdown">
       <p class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -39,9 +42,9 @@
         {{ 'header.language' | translate }}
       </p>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" [ngClass]="{'active': activeLang == 'es'}" (click)="cambiarLenguaje('cat')">Català<img
+        <a class="dropdown-item" [ngClass]="{'active': activeLang == 'es'}" (click)="changeLanguage('cat')">Català<img
             class="flag" src="{{'../../../assets/icons/catalonia-flag.png'}}"></a>
-        <a class="dropdown-item" [ngClass]="{'active': activeLang == 'en'}" (click)="cambiarLenguaje('en')">English<img
+        <a class="dropdown-item" [ngClass]="{'active': activeLang == 'en'}" (click)="changeLanguage('en')">English<img
             class="flag" src="{{'../../../assets/icons/english-flag.png'}}"></a>
       </div>
     </div>

@@ -40,7 +40,7 @@
 
 .container-fluid {
   display: unset;
-  height: 7rem;
+  height: 5rem;
 }
 
 .flag {
@@ -62,9 +62,6 @@
   .img {
     display: none;
   }
-  .container-fluid {
-    height: 5rem;
-  }
 }
 
 @media (min-width: 570px) {
@@ -75,6 +72,10 @@
 }
 
 @media (min-width: 993px) {
+  #navbarDropdown {
+    position: relative;
+    top: 8px;
+  }
   .dropdown-menu.show {
     left: -23px;
   }
@@ -83,6 +84,10 @@
   }
   .img {
     width: 170px;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    position: relative;
+    top: 1rem;
   }
 }
 
@@ -98,4 +103,8 @@
     letter-spacing: 1.5px;
     top: 10px;
   }
+}
+
+.navbar {
+  padding: .1rem 1rem;
 }

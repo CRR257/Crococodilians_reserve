@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { CarouselComponent } from './carousel.component';
+import { ImagesService } from '../../service/images/images.service';
+
 
 describe('CarouselComponent', () => {
   let component: CarouselComponent;
@@ -8,7 +12,12 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarouselComponent ]
+      declarations: [ CarouselComponent ],
+      imports: [
+        TranslateModule.forRoot(),
+        HttpClientTestingModule
+      ],
+      providers: [ImagesService]
     })
     .compileComponents();
   }));
@@ -21,5 +30,11 @@ describe('CarouselComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should getImages', () => {
+    spyOn(component, 'getImages').and.callThrough();
+    component.getImages();
+    expect(component.getImages).toHaveBeenCalled();
   });
 });

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { QuizComponent } from './quiz.component';
+import { QuizService } from '../../service/quiz/quiz.service';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -8,7 +11,12 @@ describe('QuizComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuizComponent ]
+      declarations: [ QuizComponent ],
+      imports: [
+        TranslateModule.forRoot(),
+        HttpClientTestingModule
+      ],
+      providers: [QuizService]
     })
     .compileComponents();
   }));
@@ -21,5 +29,11 @@ describe('QuizComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should getQuiz', () => {
+    spyOn(component, 'getQuiz').and.callThrough();
+    component.getQuiz();
+    expect(component.getQuiz).toHaveBeenCalled();
   });
 });

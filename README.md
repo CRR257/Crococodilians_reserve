@@ -5,7 +5,7 @@ User only can get all crocodilians created (but endpoint to create, update and d
 User can see awesome videos about crocodilians and test (
 through a quiz) their knowledge about crocodilians ^^
 
-[Demo](https://crocodilians-reserve.herokuapp.com)
+[Live_demo](https://crocodilians-reserve.herokuapp.com)
 
 ![baby_alligator](./src/assets/carousel/baby_crocodile.jpg)
 
@@ -17,8 +17,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Use the `ng build --prod` flag for a production build.
 The build artifacts will be stored in the `dist/` directory. <br>
-Copy the folder created to the backend folder `front/`
-In backend part, use `git push heroku master` to deploy to heroku
+Copy the folder created to the backend folder `front/`<br>
+In backend part, use `git push heroku master` to deploy to heroku<br>
+The git's repository for the backend is [Crocodilians_reserve__MySQL](https://github.com/CRR257/Crocodilians_reserve__MySQL)
+
+## Testing
+
+Jasmine
 
 ## Backend
 

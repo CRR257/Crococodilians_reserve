@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagesService } from '../../service/images/images.service';
-import { Images } from '../../interface/images';
+import { Images } from '../../shared';
+
 
 @Component({
   selector: 'app-carousel',

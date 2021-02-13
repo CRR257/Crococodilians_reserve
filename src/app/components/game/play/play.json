@@ -1,0 +1,24 @@
+{
+  "iconsPlay": {
+    "rock": {
+      "image": "rock.jpg",
+      "defeats" :  ["scissors","lizard"]
+    },
+    "paper": {
+      "image": "paper.jpg",
+      "defeats":  ["rock", "spock"]
+    },
+    "scissors": {
+      "image": "scissors.jpg",
+      "defeats": ["paper", "lizard"]
+    },
+    "lizard": {
+      "image": "lizard.jpg",
+      "defeats":["paper","spock"]
+    },
+    "spock": {
+      "image": "spock.jpg",
+      "defeats":["scissors","rock"]
+    }
+  }
+}

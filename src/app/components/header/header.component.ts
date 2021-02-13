@@ -15,8 +15,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() { }
 
-  public cambiarLenguaje(lang) {
+  /**
+   * Method to change app's language
+   */
+  public changeLanguage(lang) {
     this.activeLang = lang;
     this.translate.use(lang);
-  }
+  };
 }
+

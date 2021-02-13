@@ -14,6 +14,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { VideoComponent } from './components/video/video.component';
+import { GameComponent } from './components/game/game.component';
+import { PlayComponent } from './components/game/play/play.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { VideoComponent } from './components/video/video.component';
     WelcomeComponent,
     CarouselComponent,
     QuizComponent,
-    VideoComponent
+    VideoComponent,
+    GameComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,

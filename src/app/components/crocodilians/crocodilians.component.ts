@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrocodiliansService } from '../../service/crocodilians/crocodilians.service';
-import { Crocodilian } from '../../interface/crocodilian';
+import { Crocodilian } from '../../shared';
 
 @Component({
   selector: 'app-crocodilians',
@@ -19,10 +19,15 @@ export class CrocodiliansComponent implements OnInit {
     this.getCrocodilians();
   }
 
+  /**
+   * Method to get all crocodilians
+   */
   getCrocodilians() {
     this.crocoliansService.getCrocodilians().subscribe(
       data => {
         this.crocodilianData = data;
+        console.log(data);
+        console.log(data[0]);
         if (data) {
           this.setNameImages(data);
         }
@@ -33,12 +38,18 @@ export class CrocodiliansComponent implements OnInit {
     );
   }
 
+  /**
+   * Method to change image's route
+   */
   setNameImages(data) {
     this.crocodilian = data.map(obj =>
       Object.assign({}, obj, { image: 'assets/crocodiles-list/' + obj.image })
     );
   }
 
+  /**
+   * Method to get image selected
+   */
   imageSelected(image) {
     this.image = image;
   }
